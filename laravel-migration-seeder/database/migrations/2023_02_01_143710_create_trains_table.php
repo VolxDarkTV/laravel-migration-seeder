@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('train', function (Blueprint $table) {
+        Schema::create('trains', function (Blueprint $table) {
             $table -> id();
             $table -> string('run_name') -> nullable(true);
             $table -> integer('run_number') -> unique() -> unsigned();
@@ -22,12 +22,6 @@ return new class extends Migration
             $table -> string('location_destination');
             $table -> date('start_time');
             $table -> date('end_time');
-            $table -> timestamps();
-        });
-        Schema::create('travel', function (Blueprint $table) {
-            $table -> id();
-            $table -> foreign('train_id') -> references('id') -> on('train');
-            $table -> string('agency_name');
             $table -> timestamps();
         });
     }
@@ -39,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('train');
+        Schema::dropIfExists('trains');
     }
 };
