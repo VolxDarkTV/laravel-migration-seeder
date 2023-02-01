@@ -11,6 +11,6 @@ class MainController extends Controller
         $data = [
             'trains' => $trains
         ];
-        return view('layouts/welcome', $data);
+        return view('pages/home', $data);
     }
 }

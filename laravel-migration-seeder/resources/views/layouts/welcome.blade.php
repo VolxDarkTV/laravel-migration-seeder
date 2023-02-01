@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+    @yield('main')
     <main class="bg-light">
         <div class="container">
             <div class="row">
