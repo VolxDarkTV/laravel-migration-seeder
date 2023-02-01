@@ -14,8 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('train', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table -> id();
+            $table -> string('run_name') -> nullable(true);
+            $table -> integer('run_number') -> unsigned();
+            $table -> integer('price') -> unsigned();
+            $table -> string('location_start');
+            $table -> string('location_destination');
+            $table -> date('start_time');
+            $table -> date('end_time');
+            $table -> timestamps();
         });
     }
 
