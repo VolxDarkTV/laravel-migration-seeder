@@ -2,5 +2,14 @@
 
 
 @section('main')
-    <h1>hello</h1>
+    <div>
+        @foreach ($trains as $train)
+            <li class="col-2">
+                <a class="card p-2">
+                    <h6>Title: {{$train -> price}}</h6>
+                </a>
+            </li>
+            @endforeach
+            
+    </div>
 @endsection

@@ -9,11 +9,16 @@ class Train extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     private $id;
-    private $agency_name;
-    private $phone_number;
-    private $address;
-    private $description;
+    private $run_name;
+    private $run_number;
+    private $price;
+    private $location_start;
+    private $location_destination;
+    private $start_time;
+    private $end_time;
 
     public function getId(){
         return $this -> id;
@@ -21,28 +26,46 @@ class Train extends Model
     public function setId($id){
         $this -> id = $id;
     }
-    public function getAgency_name(){
-        return $this -> agency_name;
+    public function getRun_name(){
+        return $this -> run_name;
     }
-    public function setAgency_name($agency_name){
-        $this -> agency_name = $agency_name;
+    public function setRun_name($run_name){
+        $this -> run_name = $run_name;
     }
-    public function getPhone_number(){
-        return $this -> phone_number;
+    public function getRun_number(){
+        return $this -> run_number;
     }
-    public function setPhone_number($phone_number){
-        $this -> phone_number = $phone_number;
+    public function setRun_number($run_number){
+        $this -> run_number = $run_number;
     }
-    public function getAddress(){
-        return $this -> address;
+    public function getPrice(){
+        return $this -> price;
     }
-    public function setAddress($address){
-        $this -> address = $address;
+    public function setPrice($price){
+        $this -> price = $price;
     }
-    public function getDescription(){
-        return $this -> description;
+    public function getLocation_start(){
+        return $this -> location_start;
     }
-    public function setDescription($description){
-        $this -> description = $description;
+    public function setLocation_start($location_start){
+        $this -> location_start = $location_start;
+    }
+    public function getLocation_destination(){
+        return $this -> location_destination;
+    }
+    public function setLocation_destination($location_destination){
+        $this -> location_destination = $location_destination;
+    }
+    public function getStart_time(){
+        return $this -> start_time;
+    }
+    public function setStart_time($start_time){
+        $this -> start_time = $start_time;
+    }
+    public function getEnd_time(){
+        return $this -> end_time;
+    }
+    public function setEnd_time($end_time){
+        $this -> end_time = $end_time;
     }
 }
