@@ -34,6 +34,13 @@
                         </h1>
 
                         <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+                        @foreach ($trains as $train)
+                        <li class="col-2">
+                            <a class="card p-2">
+                                <h6>Title: {{$train -> agency_name}}</h6>
+                            </a>
+                        </li>
+                    @endforeach
                         <button class="btn btn-primary btn-lg align-self-start" type="button">Example button</button>
                     </div>
                 </div>
