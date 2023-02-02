@@ -9,8 +9,6 @@ class Train extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
-
     private $id;
     private $run_name;
     private $run_number;

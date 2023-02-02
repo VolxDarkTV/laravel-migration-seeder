@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('travel', function (Blueprint $table) {
             $table -> id();
             $table -> string('agency_name');
-            $table -> integer('phone_number') -> nullable(true);
+            $table -> string('phone_number') -> nullable(true);
             $table -> string('address');
             $table -> text('description') -> nullable(true);
             $table -> timestamps();
